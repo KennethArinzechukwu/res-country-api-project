@@ -1,0 +1,186 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    overflow-x: hidden;
+    width: 100%;
+    height: 100vh;
+    background-color: hsl(207, 26%, 17%);
+    color: white;
+}
+
+.navbar{
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: space-between;
+    padding: 16px 70px;
+    text-align: center;
+    background-color: hsl(209, 23%, 22%);
+    z-index: 5;
+    width: 100%;
+}
+
+.navbar a{
+    text-decoration: none;
+    color: white;
+}
+
+#logo{
+    color: white;
+    font-weight:bolder;
+    font-size: 1.5rem;
+}
+#navBtn{
+    color: white;
+    padding: 9px 17px;
+    border-radius: 20px;
+}
+.inputs{
+    border-radius: 5px;
+    padding: 14px;
+    border: 0;
+    background: hsl(209, 23%, 22%);
+    color: white;
+}
+.whereIntheWorld{
+    position: relative; 
+}
+
+.contriesApiContainer{
+    display: grid;
+    gap: 3rem;
+    grid-template-columns: repeat(4, 1fr);
+    place-items: center;
+    position: relative;
+    padding: 4rem;
+}
+
+.searchDiv{
+    display: flex;
+    justify-content: space-between;
+    margin: 1rem 0px;
+    padding: 0px 2rem;
+}
+
+.country{
+    margin: 1.5rem 3rem;
+    width: 95%;
+    height: 100%;
+    box-shadow: 2px 2px 4px rgb(30, 27, 27);
+}
+
+#img{
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+}
+h3{
+    color: white;
+    margin-bottom: 6px;
+}
+p{
+    color: white;
+    padding: 5px 0;
+    font-size: 18px;
+}
+.detail{
+    padding: 1rem;
+}
+
+#loadingGif{
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+}
+.MCountry{
+    display: none;
+}
+.dark-mode{
+    background: white;
+    color: black;
+}
+.dark-mode p{
+    color: black;
+}
+.dark-mode h3{
+    color: black;
+}
+.dark-mode .navbar{
+    background: white;
+    color: black;
+    box-shadow: 7px 7px 10px rgb(211, 210, 210);
+}
+.dark-mode .navbar #logo{
+    background: white;
+    color: black;
+}
+.dark-mode .searchR{
+    background: white;
+    color: black;
+    box-shadow: 7px 7px 10px rgb(211, 210, 210);
+}
+
+.dark-mode .searchRR{
+    background-color: white;
+    color: black;
+    box-shadow: 7px 7px 10px rgb(211, 210, 210);
+}
+
+.dark-mode .searchRRR{
+    box-shadow: 7px 7px 10px rgb(211, 210, 210);
+}
+
+@media screen and (max-width: 768px) {
+    .contriesApiContainer{
+        grid-template-columns: repeat(2, 1fr);
+        place-content: center;
+        
+    }
+    .navbar{
+        padding: 5px 12px;
+    }
+    #logo{
+        font-size: 18px;
+    }
+    .searchDiv{
+        padding: 0px 8px;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .contriesApiContainer{
+        grid-template-columns: repeat(1, 1fr);
+        place-content: center;
+    }
+    #logo{
+        font-size: 18px;
+    }
+    .navbar{
+        padding: 5px 12px;
+    }
+    .searchR{
+        margin-right: 1rem;
+    }
+    .searchDiv{
+        padding: 0px 8px;
+    }
+}
+@media screen and (max-width: 420px) {
+    #logo{
+        font-size: 18px;
+    }
+    .navbar{
+        padding: 5px 12px;
+    }
+    .searchR{
+        margin-right: 1rem;
+    }
+    .searchDiv{
+        padding: 0px 8px;
+    }
+}
